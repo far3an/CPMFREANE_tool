@@ -102,6 +102,7 @@ banner = r"""
 ██║     ██████╗██║  ██║╚██████╔╝██║ ╚████║██║██╔╝ ██╗
 ╚═╝     ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝
 
+
                                                                         
                                                                                   
                            
@@ -144,8 +145,8 @@ from pystyle import Colors, Colorate
 
 from carparktool import CarParkTool
 
-__CHANNEL_USERNAME__ = "@POPSTOOL"
-__GROUP_USERNAME__   = "@POPS_TOOLCHAT"
+__CHANNEL_USERNAME__ = "https://t.me/PLAYNIX_TOOLCHAT"
+__GROUP_USERNAME__   = "https://t.me/PLAYNIX_TOOLCHAT"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -170,7 +171,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('POPSTOOL', font='big')
+    brand_name = figlet_format('PLAYNIXTOOL', font='big')
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
     ]
@@ -795,4 +796,5 @@ if __name__ == "__main__":
             elif service == 30: # Millage
                 console.print("[bold]ENTER CAR DETAILS![/bold]")
                 car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
-                console.print("[bold]ENT    
+                console.print("[bold]ENTER NEW MILLAGE![/bold]")
+                custom = IntPrompt.ask("                 
