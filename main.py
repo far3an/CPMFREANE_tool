@@ -753,7 +753,7 @@ if __name__ == "__main__":
                 if cpm.hack_car_speed(car_id, new_hp, new_inner_hp, new_nm, new_torque):
                     console.print("[bold green]SUCCESFUL (✔)[/bold green]")
                     console.print("================================")
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.yellow_to_red, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
@@ -797,4 +797,36 @@ if __name__ == "__main__":
                 console.print("[bold]ENTER CAR DETAILS![/bold]")
                 car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
                 console.print("[bold]ENTER NEW MILLAGE![/bold]")
-                custom = IntPrompt.ask("                 
+                custom = IntPrompt.ask("[bold blue][?]﻿ENTER MILLAGE U WANT[/bold blue]")                
+                console.print("[bold red][%] Setting Percentage [/bold red]: ", end=None)
+                if cpm.millage_car(car_id, custom):
+                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.yellow_to_red, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.yellow_to_red, 'PLEASE TRY AGAIN'))
+                    sleep(2)
+                    continue
+            elif service == 31: # Brake
+                console.print("[bold]ENTER CAR DETAILS![/bold]")
+                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
+                console.print("[bold]ENTER NEW BRAKE![/bold]")
+                custom = IntPrompt.ask("[bold blue][?]﻿ENTER BRAKE U WANT[/bold blue]")                
+                console.print("[bold red][%] Setting BRAKE [/bold red]: ", end=None)
+                if cpm.brake_car(car_id, custom):
+                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.yellow_to_red, 'FAILED'))
+                    print(Colorate.Horizontal(Colors.yellow_to_red, 'PLEASE TRY AGAIN'))
+                    sleep(2)
+                    continue
+            else: continue
+            break
+        break
+            
+        
