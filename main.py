@@ -754,9 +754,7 @@ if __name__ == "__main__":
                     console.print("[bold green]SUCCESFUL (✔)[/bold green]")
                     console.print("================================")
                 answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.yellow_to_red, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
-                    else: continue
-                else:
+                if answ == "y": print(Colorate.Horizontal(Colors.yellow_to_red, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
                     print(Colorate.Horizontal(Colors.yellow_to_red, 'FAILED.'))
                     print(Colorate.Horizontal(Colors.yellow_to_red, '[!] Please use valid values.'))
                     sleep(2)
